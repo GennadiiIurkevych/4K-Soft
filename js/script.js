@@ -160,3 +160,29 @@
 
 // console.log(isChecked && isClose);
 // console.log(isChecked || isClose);
+
+const numberOfFilms = +prompt("Скількт фільмів Ви вже подивилися?", "");
+console.log(numberOfFilms);
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: 'false'
+};
+console.log(personalMovieDB);
+
+
+const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+      userQuestion2 = +prompt("На скільки оцінете його?", ""),
+      userQuestion3 = prompt("Один з останніх переглянутих фільмів?", ""),
+      userQuestion4 = +prompt("На скільки оцінете його?", "");
+console.log(userQuestion1);
+console.log(userQuestion2);
+console.log(userQuestion3);
+console.log(userQuestion4);
+
+personalMovieDB.movies[userQuestion1] = userQuestion2;
+personalMovieDB.movies[userQuestion3] = userQuestion4;
+console.log(personalMovieDB);
