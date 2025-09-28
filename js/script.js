@@ -161,28 +161,190 @@
 // console.log(isChecked && isClose);
 // console.log(isChecked || isClose);
 
-const numberOfFilms = +prompt("Скількт фільмів Ви вже подивилися?", "");
-console.log(numberOfFilms);
-
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: 'false'
-};
-console.log(personalMovieDB);
 
 
-const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
-      userQuestion2 = +prompt("На скільки оцінете його?", ""),
-      userQuestion3 = prompt("Один з останніх переглянутих фільмів?", ""),
-      userQuestion4 = +prompt("На скільки оцінете його?", "");
-console.log(userQuestion1);
-console.log(userQuestion2);
-console.log(userQuestion3);
-console.log(userQuestion4);
+/*Lesson 2.14* Створення додатку/
 
-personalMovieDB.movies[userQuestion1] = userQuestion2;
-personalMovieDB.movies[userQuestion3] = userQuestion4;
-console.log(personalMovieDB);
+// const numberOfFilms = +prompt("Скількт фільмів Ви вже подивилися?", "");
+// console.log(numberOfFilms);
+
+// const personalMovieDB = {
+//   count: numberOfFilms,
+//   movies: {},
+//   actors: {},
+//   genres: [],
+//   privat: 'false'
+// };
+// console.log(personalMovieDB);
+
+
+// const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+//       userQuestion2 = +prompt("На скільки оцінете його?", ""),
+//       userQuestion3 = prompt("Один з останніх переглянутих фільмів?", ""),
+//       userQuestion4 = +prompt("На скільки оцінете його?", "");
+// console.log(userQuestion1);
+// console.log(userQuestion2);
+// console.log(userQuestion3);
+// console.log(userQuestion4);
+
+// personalMovieDB.movies[userQuestion1] = userQuestion2;
+// personalMovieDB.movies[userQuestion3] = userQuestion4;
+// console.log(personalMovieDB);
+
+
+
+/*Lesson 2.15 Умови*/
+
+// if ( 4 == 9 ) {
+//   console.log('OK!');
+// } else {
+//   console.log('Error');
+// };
+
+// const num  = 50;
+
+// if (num < 49) {
+//   console.log('Error');
+// } else if (num > 100) {
+//   console.log('To much!');
+// } else {
+//   console.log('OK!');
+// }
+
+// /*Тернарний оператор*/
+
+// (num === 50) ?  console.log('OK!') : console.log('Error');
+
+
+// const number = "50";
+
+// switch (number) {
+//   case "49":
+//      console.log('Неправильно');
+//      break;
+//   case "100":
+//      console.log('Неправильно');
+//      break;
+//   case "50":
+//      console.log('В ціль!');
+//      break;
+//   default:
+//     console.log('Не цього разу');
+//      break;
+// };
+
+
+/*Lesson 2.16 Логічні оператори*/
+
+// const hamburger = 5,
+//       fries = null;
+
+// if (hamburger && fries) {
+//   console.log('Я ситий!');
+// }
+
+// console.log(hamburger && fries);
+
+// const hamburger = 3,
+//       fries = 1,
+//       cola = 2;
+
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && 'fries');
+
+// console.log(hamburger === 3 && cola && fries);
+
+// if (hamburger === 3 && cola === 1 && fries) {
+//   console.log('Всі ситі!');
+// } else {
+//   console.log('Ми йдемо');
+// }
+
+
+// const hamburger = 0,
+//       fries = null,
+//       cola = 0;
+
+// // console.log(hamburger === 3 && cola && fries);
+
+// if (hamburger || cola || fries) {
+//   console.log('Всі задоволені!');
+// } else {
+//   console.log('Ми йдемо');
+// }
+
+// console.log(hamburger || cola || fries);
+
+// let johnReport, alexReport, samReport, mariaReport = 'done';
+
+// console.log(johnReport || alexReport || samReport || mariaReport);
+
+// const hamburger = 3,
+//       fries = 3,
+//       cola = 0,
+//       nuggets = 2;
+
+// if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+//   console.log('Всі задоволені!');
+// } else {
+//   console.log('Ми йдемо');
+// }
+
+// // console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+// console.log(hamburger === 3 && (cola === 2 || fries === 3) && nuggets);
+
+// let johnReport, alexReport, samReport, mariaReport = 'done';
+
+// console.log(johnReport || alexReport || samReport || mariaReport);
+
+
+// console.log(!0);
+
+/* Завдання*/
+
+console.log( NaN || 2 || undefined ); // -> 2
+
+console.log( NaN && 2 && undefined ); // -> NaN
+
+console.log( 1 && 2 && 3 ); // -> 3
+
+console.log( !1 && 2 || !3 ); // -> 2 (false)
+
+console.log( 25 || null && !3 ); // -> 25
+
+console.log( NaN || null || !3 || undefined || 5); // -> 5
+
+console.log( NaN || null && !3 && undefined || 5); // -> 5
+
+console.log( 5 === 5 && 3 > 1 || 5); // -> 5 (true)
+
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+
+// if (hamburger === 3 && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// } // -> Done!
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+
+// if (hamburger || cola || fries === 3 || nuggets) {
+//    console.log('Done!')
+// } // -> Done!
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger && cola || fries === 3 && nuggets) {
+   console.log('Done!')
+} // -> не виконуються умови
