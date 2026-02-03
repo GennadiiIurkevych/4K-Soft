@@ -119,7 +119,7 @@
 // console.log(answer1 + 5);
 
 // const answer2 = +prompt("Вам є 18?", "18");
-// console.log(typeof(answer2),answer2 + 5);
+// console.log(typeof(answer2), answer2 + 5);
 
 // const answer3 = prompt("Вам є 18?", "18");
 // console.log(5 + answer3 );
@@ -163,7 +163,7 @@
 
 
 
-/*Lesson 2.14* Створення додатку/
+/*Lesson 2.14* Створення додатку*/
 
 // const numberOfFilms = +prompt("Скількт фільмів Ви вже подивилися?", "");
 // console.log(numberOfFilms);
@@ -191,8 +191,6 @@
 // personalMovieDB.movies[userQuestion3] = userQuestion4;
 // console.log(personalMovieDB);
 
-
-
 /*Lesson 2.15 Умови*/
 
 // if ( 4 == 9 ) {
@@ -211,7 +209,7 @@
 //   console.log('OK!');
 // }
 
-// /*Тернарний оператор*/
+/*Тернарний оператор*/
 
 // (num === 50) ?  console.log('OK!') : console.log('Error');
 
@@ -234,7 +232,7 @@
 // };
 
 
-/*Lesson 2.16 Логічні оператори*/
+/*Lesson 2.16 Логічні оператори*/ 
 
 // const hamburger = 5,
 //       fries = null;
@@ -243,7 +241,7 @@
 //   console.log('Я ситий!');
 // }
 
-// console.log(hamburger && fries);
+//  console.log(hamburger && fries);
 
 // const hamburger = 3,
 //       fries = 1,
@@ -268,7 +266,7 @@
 //       fries = null,
 //       cola = 0;
 
-// // console.log(hamburger === 3 && cola && fries);
+// console.log(hamburger === 3 && cola && fries);
 
 // if (hamburger || cola || fries) {
 //   console.log('Всі задоволені!');
@@ -293,7 +291,7 @@
 //   console.log('Ми йдемо');
 // }
 
-// // console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+// console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
 // console.log(hamburger === 3 && (cola === 2 || fries === 3) && nuggets);
 
 // let johnReport, alexReport, samReport, mariaReport = 'done';
@@ -305,21 +303,21 @@
 
 /* Завдання*/
 
-console.log( NaN || 2 || undefined ); // -> 2
+// console.log( NaN || 2 || undefined ); // -> 2
 
-console.log( NaN && 2 && undefined ); // -> NaN
+// console.log( NaN && 2 && undefined ); // -> NaN
 
-console.log( 1 && 2 && 3 ); // -> 3
+// console.log( 1 && 2 && 3 ); // -> 3
 
-console.log( !1 && 2 || !3 ); // -> 2 (false)
+// console.log( !1 && 2 || !3 ); // -> 2 (false)
 
-console.log( 25 || null && !3 ); // -> 25
+// console.log( 25 || null && !3 ); // -> 25
 
-console.log( NaN || null || !3 || undefined || 5); // -> 5
+// console.log( NaN || null || !3 || undefined || 5); // -> 5
 
-console.log( NaN || null && !3 && undefined || 5); // -> 5
+// console.log( NaN || null && !3 && undefined || 5); // -> 5
 
-console.log( 5 === 5 && 3 > 1 || 5); // -> 5 (true)
+// console.log( 5 === 5 && 3 > 1 || 5); // -> 5 (true)
 
 
 // const hamburger = 3;
@@ -340,11 +338,181 @@ console.log( 5 === 5 && 3 > 1 || 5); // -> 5 (true)
 //    console.log('Done!')
 // } // -> Done!
 
-let hamburger;
-const fries = NaN;
-const cola = 0;
-const nuggets = 2;
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
 
-if (hamburger && cola || fries === 3 && nuggets) {
-   console.log('Done!')
-} // -> не виконуються умови
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// } // -> не виконуються умови
+
+/*Lesson 2.17 Цикли*/
+
+// let num = 50;
+
+// while (num <= 55) {
+//    console.log(num);
+//    num++;
+// };
+
+// do {
+//    console.log(num);
+//    num++;
+// }
+// while (num <= 55);
+
+// for (let i = 1; i < 8; i++) {
+//    console.log(num);
+//    num++;
+// }
+
+// for (let i = 1; i < 10; i++) {
+//    if (i === 6) {
+//       // break;
+//       continue;
+//    }
+//    console.log(i);
+// }
+
+/*Lesson 2.18 Цикл у циклі та мітки*/
+
+// for (let i = 0; i < 3; i++) {
+//    console.log(i);
+//    for (let j = 0; j < 3; j++) {
+//       console.log(j);
+//    }
+// }
+
+/* Завдання*/
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+/*Мій варіант*/
+
+// let a = '*';
+// for (let i = 1; i < 7; i++) {  
+//    console.log(a);
+//    a += "*";
+// }
+
+// let result = '';
+// const length = 7;
+
+// for (let i = 1; i < length; i++) {    
+//    for (let j = 0; j < i; j++) {
+//       result += "*";
+//    }
+//    result += "\n";
+// };
+
+// console.log(result);
+
+// first: for (let i = 0; i < 3; i++) {
+//    console.log(`First level: ${i}`);
+//    for (let j = 0; j < 3; j++) {
+//       console.log(`Second level: ${j}`);
+//       for (let k = 0; k < 3; k++) {
+//          if (k===2) continue first;
+//          console.log(`Third level: ${k}`);
+//       }
+//    }  
+// }
+
+// first: for (let i = 0; i < 3; i++) {
+//    console.log(`First level: ${i}`);
+//    for (let j = 0; j < 3; j++) {
+//       console.log(`Second level: ${j}`);
+//       for (let k = 0; k < 3; k++) {
+//          if (k===2) break first;
+//          console.log(`Third level: ${k}`);
+//       }
+//    }  
+// }
+
+/*Lesson 2.18.1 Практика 2*/
+
+let numberOfFilms = +prompt("Скільки фільмів Ви вже подивилися?", "");
+
+// console.log(numberOfFilms);
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: 'false'
+};
+
+
+
+for (let i = 0; i < 2; i++) {
+   if (personalMovieDB.count < 2) {
+      alert ("Перегляньте ще кілька фільмів!");
+      break;
+   }
+   const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+         userQuestion2 = +prompt("На скільки оцінете його?", "");
+
+   if (userQuestion1 != null && userQuestion2 != null && userQuestion1 != "" && userQuestion2 != "" && userQuestion1.length <= 50) {
+   console.log('done');
+   personalMovieDB.movies[userQuestion1] = userQuestion2;   
+  } else {
+      i--;
+      console.log('error!');        
+  }         
+}
+
+
+
+
+// for (let i = 0; i < 2; i++) {
+//    const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+//          userQuestion2 = +prompt("На скільки оцінете його?", "");
+
+//    if (userQuestion1 === null || userQuestion2 === null || userQuestion1 === "" || userQuestion2 === "" || userQuestion1.length > 50) {
+//       i--;
+//       console.log('Введіть коректні дані!');
+//    } else {
+//       console.log('done');   
+//       personalMovieDB.movies[userQuestion1] = userQuestion2;
+//    }         
+// }
+
+
+
+
+// for (let i = 0; i < 2; i++) {
+//    let userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+//        userQuestion2 = +prompt("На скільки оцінете його?", "");
+
+//    while (userQuestion1 === null || userQuestion2 === null || userQuestion1 === "" || userQuestion2 === "" || userQuestion1.length > 50) {
+//       console.log('Введіть коректні дані!');
+//       userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", "");
+//       userQuestion2 = +prompt("На скільки оцінете його?", "");
+//    } 
+//       console.log('done');   
+//       personalMovieDB.movies[userQuestion1] = userQuestion2;         
+// }
+
+if (personalMovieDB.count < 10) {
+   console.log("Переглянуто досить мало фільмів");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+   console.log("Ви класичний глядач");
+} else if (personalMovieDB.count > 30) {
+   console.log("Ви кіноман!");
+} else {
+   console.log("Виникла помилка!");
+}
+
+
+console.log(personalMovieDB);
+
+
+
+
