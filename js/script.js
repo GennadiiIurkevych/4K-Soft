@@ -437,36 +437,36 @@
 
 /*Lesson 2.18.1 Практика 2*/
 
-let numberOfFilms = +prompt("Скільки фільмів Ви вже подивилися?", "");
+// let numberOfFilms = +prompt("Скільки фільмів Ви вже подивилися?", "");
 
 // console.log(numberOfFilms);
 
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: 'false'
-};
+// const personalMovieDB = {
+//   count: numberOfFilms,
+//   movies: {},
+//   actors: {},
+//   genres: [],
+//   privat: 'false'
+// };
 
 
 
-for (let i = 0; i < 2; i++) {
-   if (personalMovieDB.count < 2) {
-      alert ("Перегляньте ще кілька фільмів!");
-      break;
-   }
-   const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
-         userQuestion2 = +prompt("На скільки оцінете його?", "");
+// for (let i = 0; i < 2; i++) {
+//    if (personalMovieDB.count < 2) {
+//       alert ("Перегляньте ще кілька фільмів!");
+//       break;
+//    }
+//    const userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+//          userQuestion2 = +prompt("На скільки оцінете його?", "");
 
-   if (userQuestion1 != null && userQuestion2 != null && userQuestion1 != "" && userQuestion2 != "" && userQuestion1.length <= 50) {
-   console.log('done');
-   personalMovieDB.movies[userQuestion1] = userQuestion2;   
-  } else {
-      i--;
-      console.log('error!');        
-  }         
-}
+//    if (userQuestion1 != null && userQuestion2 != null && userQuestion1 != "" && userQuestion2 != "" && userQuestion1.length <= 50) {
+//    console.log('done');
+//    personalMovieDB.movies[userQuestion1] = userQuestion2;   
+//   } else {
+//       i--;
+//       console.log('error!');        
+//   }         
+// }
 
 
 
@@ -500,19 +500,219 @@ for (let i = 0; i < 2; i++) {
 //       personalMovieDB.movies[userQuestion1] = userQuestion2;         
 // }
 
-if (personalMovieDB.count < 10) {
-   console.log("Переглянуто досить мало фільмів");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-   console.log("Ви класичний глядач");
-} else if (personalMovieDB.count > 30) {
-   console.log("Ви кіноман!");
-} else {
-   console.log("Виникла помилка!");
+// if (personalMovieDB.count < 10) {
+//    console.log("Переглянуто досить мало фільмів");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//    console.log("Ви класичний глядач");
+// } else if (personalMovieDB.count > 30) {
+//    console.log("Ви кіноман!");
+// } else {
+//    console.log("Виникла помилка!");
+// }
+
+
+// console.log(personalMovieDB);
+
+// let a = 3
+// function addTwo(x) {
+//    let ret = x + 2
+//   return ret
+// }
+// let b = addTwo(a)
+// console.log(b)
+
+// let val1 = 2
+// function multiplyThis(n) {
+//    let ret = n * val1
+//    return ret
+// }
+// let multiplied = multiplyThis(6)
+// console.log('example of scope:', multiplied)
+
+// let val = 7
+// function createAdder() {
+//   function addNumbers(a, b) {
+//     let ret = a + b
+//     return ret
+//   }
+//   return addNumbers
+// }
+// let adder = createAdder()
+// let sum = adder(val, 8)
+// console.log('example of function returning a function: ', sum)
+
+// function createCounter() {
+//    let counter = 0
+//    const myFunction = function() {
+//     counter = counter + 1
+//     return counter
+//   }
+//   return myFunction
+// }
+// const increment = createCounter()
+// const c1 = increment()
+// const c2 = increment()
+// const c3 = increment()
+// console.log('example increment', c1, c2, c3)
+
+// let c = 4
+// const addX = x => n => n + x
+// const addThree = addX(3)
+// let d = addThree(c)
+// console.log('example partial application', d)
+
+
+
+// let value = "Сюрприз!";
+
+// function f() {
+//   let value = "найближче значення";
+
+//   function g() {
+//     debugger; // в консолі введіть: alert(value); Сюрприз!
+//   }
+
+//   return g;
+// }
+
+// let g = f();
+// g();
+
+// let name = "Іван";
+
+// function sayHi() {
+//   alert("Привіт, " + name);
+// }
+
+// name = "Петро";
+
+// sayHi(); // що вона покаже "Іван" чи "Петро"?
+
+// Lesson 2.22 Методи та властивості рядків і чисел
+
+// const str = 'test';
+// const arr = [1, 2, 4];
+
+// console.log(str.length);
+// console.log(arr.length);
+
+// console.log(str[2]);
+// console.log(str.toLocaleUpperCase());
+
+// const fruit = "Some fruit";
+// console.log(fruit.indexOf("fruit"));
+
+// const logg = "Hello world";
+// console.log(logg.slice(6, 11));
+// console.log(logg);
+// console.log(logg.slice(6));
+// console.log(logg.slice(-5, -1));
+
+// console.log(logg.substring(6, 11));
+// console.log(logg.substring(9, 6));
+
+// console.log(logg.substr(6, 5));
+
+// const num = 12.2;
+// console.log(Math.round(num));
+
+// const test = "12.2px";
+// console.log(parseInt(test));
+
+
+/*Lesson 2.23 Практика 3*/
+
+let numberOfFilms;
+
+function start() {
+  numberOfFilms = +prompt("Скільки фільмів Ви вже подивилися?", "");
+
+  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt("Скільки фільмів Ви вже подивилися?", "");
+  }
 }
 
+start();
 
-console.log(personalMovieDB);
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
 
+function rememberMyFilms() {
+  for (let i = 0; i < 2; i++) {
+      if (personalMovieDB.count < 2) {
+        alert ("Перегляньте ще кілька фільмів!");
+        break;
+      }
+    let userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", ""),
+        userQuestion2 = +prompt("На скільки оцінете його?", "");
 
+    while (userQuestion1 === null || userQuestion2 === null || userQuestion1 === "" || userQuestion2 === "" || userQuestion1.length > 50) {
+        console.log('Введіть коректні дані!');
+        userQuestion1 = prompt("Один з останніх переглянутих  фільмів?", "");
+        userQuestion2 = +prompt("На скільки оцінете його?", "");
+    } 
+        console.log('done');   
+        personalMovieDB.movies[userQuestion1] = userQuestion2;         
+  }
+}
 
+rememberMyFilms();
 
+function detectPersonalLevel() {
+  if (personalMovieDB.count < 10) {
+    console.log("Переглянуто досить мало фільмів");
+  } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log("Ви класичний глядач");
+  } else if (personalMovieDB.count > 30) {
+    console.log("Ви кіноман!");
+  } else {
+    console.log("Виникла помилка!");
+  }
+}
+
+detectPersonalLevel();
+
+let askGenres;
+
+function writeYourGenres() {
+  for (let i = 1; i < 4; i++) {
+    askGenres = prompt(`Ваш улюблений жанр під номером ${i}`, '');
+    personalMovieDB.genres.push(askGenres);
+  }
+}
+
+// function writeYourGenres() {
+//   for (let i = 1; i <= 3; i++) {
+//     const askGenres = prompt(`Ваш улюблений жанр під номером ${i}`, '');
+//     personalMovieDB.genres[i - 1] = askGenres;
+//   }
+// }
+
+// function writeYourGenres() {
+//   for (let i = 1; i <= 3; i++) {
+//     personalMovieDB.genres[i - 1] = prompt(`Ваш улюблений жанр під номером ${i}`, '');
+//   }
+// }
+
+writeYourGenres()
+
+function showMyDB() {
+  if (personalMovieDB.privat === false) {
+    console.log(personalMovieDB);
+  }
+}
+
+showMyDB();
+
+// function showMyDB(hidden) {
+//   if (!hidden) {
+//     console.log(personalMovieDB);
+//   }
+// }
+
+// showMyDB(personalMovieDB.privat);
